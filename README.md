@@ -1,10 +1,9 @@
 # Projct1: Python-docx 
 ### **Monthly Audit Issue Tracker by using Python-docx package**
 
-<br/>
 
 ## Introduction
-------
+
 Audit issue tracking is as important phase of audit cycle as audit fieldwork. The bigger the company is more messy and oblivious people can be if there is absent of well-formed issue tracking system.
 Auditor’s roles involve keeping an issues log, due dates, and responsible employees. It is also auditor’s job to send reminder emails to directors and employees involved until they complete the issue and close the action plan.\
 \
@@ -16,7 +15,7 @@ This project is to create the script in Python that can automate such processes 
 <br/>
 
 ## Goal
-------
+
 ### Generate monthly **Audit Issue Tracking reminder** in <ins>word document</ins> with <ins>tables</ins> of **Open Action Plans**.
 
 <br/>
@@ -25,8 +24,6 @@ This project is to create the script in Python that can automate such processes 
 1. Perform data cleaning of raw data from Audit Data Repository
 2. Filter data and display open action items for each department
 3. Configure word document formats: such as font, style, color and margins
-
-<br/>
 
 ### Features: 
 * Program: **Python**
