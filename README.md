@@ -1,6 +1,7 @@
 # Projct1: Python-docx 
 ### **Monthly Audit Issue Tracker by using Python-docx package**
 
+<br/>
 
 ## Introduction
 
@@ -11,14 +12,10 @@ However, numerous numbers of departments and employees make the process harder. 
 \
 This project is to create the script in Python that can automate such processes in order to eliminate human errors, save time, and improve work process more efficiently.
 
-
 <br/>
 
 ## Goal
-
 ### Generate monthly **Audit Issue Tracking reminder** in <ins>word document</ins> with <ins>tables</ins> of **Open Action Plans**.
-
-<br/>
 
 ### Objects:
 1. Perform data cleaning of raw data from Audit Data Repository
