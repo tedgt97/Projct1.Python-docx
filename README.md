@@ -15,12 +15,12 @@ This project is to create the script in Python that can automate such processes 
 <br/>
 
 ## Goal
-### Generate monthly Audit Issue Tracking reminder in <ins>word document</ins> with <ins>tables</ins> of Open Action Plans.
+### Generate monthly <ins>Audit Issue Tracking reminder</ins> in <ins>word document</ins> with <ins>tables</ins> of Open Action Plans.
 
 ### Objects:
 1. Perform data cleaning of raw data from Audit Data Repository
 2. Filter data and display open action items for each department
-3. Configure word document formats: such as font, style, color and margins
+3. Configure word document formats: such as font, style, color and margin
 
 ### Features: 
 * Program: **Python**
