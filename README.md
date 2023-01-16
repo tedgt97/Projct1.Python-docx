@@ -6,11 +6,11 @@
 ## Introduction
 
 Audit issue tracking is as important phase of audit cycle as audit fieldwork. The bigger the company is more messy and oblivious people can be if there is absent of well-formed issue tracking system.
-Auditor’s roles involve keeping an issues log, due dates, and responsible employees. It is also auditor’s job to send reminder emails to directors and employees involved until they complete the issue and close the action plan.\
+Auditor’s roles involve keeping an issues log, due dates, and responsible employees. It is also auditor’s job to send reminder emails to directors and relevant employees until they complete issue and close action plan.\
 \
-However, numerous numbers of departments and employees make the process harder. Sometimes auditor may forget include relevant employees in email, omit some action plans in reminder, or simply make typos in business communications. Not only that, creating each report for each department takes significant amount of time. \
+However, numerous numbers of departments and employees make the process harder. Sometimes auditor may forget to include relevant employees in emails, omit some action plans in reminders, or simply make typos in business communications. Not only that, creating each report for each department takes significant amount of time. \
 \
-This project is to create the script in Python that can automate such processes in order to eliminate human errors, save time, and improve work process more efficiently.
+This project is to create a script in Python that can automate such processes in order to reduce human errors, save time, and improve work process more efficiently.
 
 <br/>
 
