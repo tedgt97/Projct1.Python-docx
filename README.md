@@ -29,6 +29,9 @@ This project is to create a script in Python that can automate such processes in
     * **Automation.ipynb** --> Python Script
     * **tblReport Query.xlsx** --> raw data file exported from Data Repository
 
+### Result:
+![Information Protection Department Report Sample](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/Report_Result_Sample.png)
+
 <br/>
 
 ## Data Validation
