@@ -65,7 +65,7 @@ Date2 = 'January 2, 2023'
 ```
 Data_Repository = Data_Repository.rename(columns = {'Issue Number': 'Issue # Ref', 'Project Name': 'Audit Name', 'Management Action': 'Brief Description'})
 ```
-* Select only certain columns that will be shown in the report and rename into report convention
+* Select only certain columns that will be shown in the report and rename into a report convention
 
 <br/>
 
@@ -84,7 +84,7 @@ Data_Repository['3rd Revised Target Date'] = pd.to_datetime(Data_Repository['3rd
 today_o = date.today().strftime('%m.%d.%y')
 today = datetime.strptime(today_o, "%m.%d.%y")
 ```
-* Getting today date when generating the report and changing the format including HH:MM:SS. Again, not necessary for ordinary situation, but needed for *Expired Action Highlight* later
+* Getting today date when generating the report and changing the format into [date object] including HH:MM:SS. Again, not necessary for ordinary situation, but needed for *Expired Action Highlight* later
 
 <br/>
 
