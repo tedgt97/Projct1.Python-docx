@@ -25,3 +25,7 @@ This project is to create the script in Python that can automate such processes 
 ### Features: 
 * Program: **Python**
 * Packages: **pandas**, **Python-docx**, **datetime**
+
+<br/>
+
+## 1. CONFIG THIS BEFORE RUN
