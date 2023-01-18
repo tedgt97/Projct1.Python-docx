@@ -250,5 +250,5 @@ Please note: Target Date extensions will need to be approved by the respective D
     If extended four times --> **Revised Target Date** and **1st Revised Target Date** and **2nd Revised Target Date** and **3rd Revised Target Date**
 * Number of columns will vary on the maximum number of Target Date extended
     * Each department has different number of extension and therefore it is necessary to set columns differently by each circumstance
-> <ins>Commercial Credit_01.02.23.docx</ins> does not have any action extended and therefore has only four columns.\
-However, <ins>Servicing & Loyalty_01.02.23.docx</ins> has one action extended four times, and therefore has 8 columns
+> [<ins>Commercial Credit_01.02.23.docx</ins>](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Report%20Result/Commercial%20Credit_01.02.23.docx) does not have any action extended and therefore has only four columns.\
+However, [<ins>Servicing & Loyalty_01.02.23.docx</ins>](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Report%20Result/Servicing%20%26%20Loyalty_01.02.23.docx) has one action extended four times, and therefore has 8 columns
