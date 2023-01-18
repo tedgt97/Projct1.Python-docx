@@ -108,11 +108,11 @@ for i in range(0, len(Data_Repository)):
         Data_Repository.loc[i, '2nd Revised Target Date'] = Data_Repository.loc[i, '2nd Revised Target Date'] = list[1]
 ```
 <details>
-<summary>Data_Error.PNG</summary>
+<summary>Data_Error.PNG</summary><blockquote>
 
 ![Data Error Sample](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/Data_Error.PNG)
 
-</details>
+</blockquote></details>
 * Notice that "Payment Processing" project has error in Target Date; 1st Revised Target Date comes after 2nd Revised Target Date
     * This is due to human error when entering details in the data repository. 
 * Since "Target Date" and "Revised Target Date" are not influenced by this error, we can simply re-arrange 1st & 2nd & 3rd Revised Target Date in chronic order by using list.sort
