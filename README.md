@@ -130,13 +130,13 @@ for i in range(0, len(Data_Repository)):
 * This is a preset of word document format
 * **[doc = docx.Document()]** is Document constructor from **Python-docx package**
     * Every Document objects must follow after the initial constructor
-* **[section.~]** codes configures fortmat of [Layout --> Margins] in Document
+* **[section.~]** codes configure fortmat of [Layout --> Margins] in Document
     * ![Doc Margins Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/doc_margins.PNG)
-* **[normal_style]** codes configures format of [Home --> Styles --> Normal] in Document
+* **[normal_style]** codes configure format of [Home --> Styles --> Normal] in Document
     * ![Doc Style Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/doc_style.PNG)
-> Note that **[body]** function has five different arguments
-    * **To** & **cc** & **evidence** --> defined in <ins>dictionary</ins> from **5. Departments** section
-    * **dept** --> defined in <ins>list</ins> from **5. Departments** section
+> Note that **[body]** function has five different arguments\
+    * **To** & **cc** & **evidence** --> defined in <ins>dictionary</ins> from **5. Departments** section\
+    * **dept** --> defined in <ins>list</ins> from **5. Departments** section\
     * **Date1** & **Date2** --> already defined in **1. Config This Before Run** Section
 
 <br/>
