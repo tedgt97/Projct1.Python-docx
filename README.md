@@ -131,9 +131,9 @@ for i in range(0, len(Data_Repository)):
 * **[doc = docx.Document()]** is Document constructor from **Python-docx package**
     * Every Document objects must follow after the initial constructor
 * **[section.~]** codes configure fortmat of [Layout --> Margins] in Document
-    * ![Doc Margins Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/doc_margins.PNG)
+    ![Doc Margins Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/doc_margins.PNG)
 * **[normal_style]** codes configure format of [Home --> Styles --> Normal] in Document
-    * ![Doc Style Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/doc_style.PNG)
+    ![Doc Style Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/doc_style.PNG)
 > Note that **[body]** function has five different arguments\
     * **To** & **cc** & **evidence** --> defined in <ins>dictionary</ins> from **5. Departments** section\
     * **dept** --> defined in <ins>list</ins> from **5. Departments** section\
@@ -148,7 +148,7 @@ To: {}
 cc: {}
     '''.format(To, cc)
 ```
-* ![Email Receivers](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/main1.PNG)
+![Email Receivers](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/main1.PNG)
 * **[main1]** prints names of employees who will receive report email
     * "To:" for head of department
     * "cc:" for relevant employees
@@ -158,7 +158,7 @@ cc: {}
 Subject: {} Open Audit Issues / Action Plans Summary as of {}
     '''.format(dept, Date1)
 ```
-* ![Subject line](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/line1.PNG)
+![Subject line](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/line1.PNG)
 * **[line1]** prints subject line of email
     * contains the name of department and date of report
 
@@ -175,7 +175,7 @@ Please note: Target Date extensions will need to be approved by the respective D
 
     '''.format(Date2, evidence)
 ```
-* ![line2](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/line2.PNG)
+![line2](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/line2.PNG)
 * **[line2]** prints body paragraph of email
     * "**evidence**" for whom to send evidence of action plan (mostly auditor who is in charge of)
 
