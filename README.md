@@ -127,12 +127,9 @@ for i in range(0, len(Data_Repository)):
 
 </details>
 
-<details>
-<summary>
 
 ## 4. Body
 
-</summary>
 
  Every code for **4. Body** is inside of function called "body". Thus, be mindful of indentation.
 
@@ -178,6 +175,8 @@ cc: {}
     * "To:" for head of department
     * "cc:" for relevant employees
 
+<br/>
+
 ```
     line1 = '''
 Subject: {} Open Audit Issues / Action Plans Summary as of {}
@@ -188,6 +187,8 @@ Subject: {} Open Audit Issues / Action Plans Summary as of {}
 
 * **[line1]** prints subject line of email
     * contains the name of department and date of report
+
+<br/>
 
 ```
     line2 = '''
@@ -208,6 +209,8 @@ Please note: Target Date extensions will need to be approved by the respective D
 * **[line2]** prints body paragraph of email
     * "**evidence**" for whom to send evidence of action plan (mostly auditor who is in charge of)
 
+<br/>
+
 ```
     parag = doc.add_paragraph(main1, 'Normal')
     parag.add_run(line1).font.color.rgb = RGBColor(0, 32, 96)
@@ -218,8 +221,34 @@ Please note: Target Date extensions will need to be approved by the respective D
 * After initial texts of paragraph, additional texts can be added by **[add_run]**
     * each line added is subordinated to paragraph and follows paragraph's format unless defined seperately like **[line1]**
 
+<br/>
 
+```
+    excel = Data_Repository[Data_Repository['DepartmentResponsible'] == dept]
+```
+* By filtering dataframe with department list, readily generate reports for necessary departments only
 
+<br/>
 
-
-</details>
+```
+    if excel['3rd Revised Target Date'].notnull().any() == True:
+        excel = excel[['Issue # Ref', 'Target Date', '1st Revised Target Date', '2nd Revised Target Date', '3rd Revised Target Date', 'Revised Target Date', 'Audit Name', 'Brief Description']]
+    elif excel['2nd Revised Target Date'].notnull().any() == True:
+        excel = excel[['Issue # Ref', 'Target Date', '1st Revised Target Date', '2nd Revised Target Date', 'Revised Target Date', 'Audit Name', 'Brief Description']]
+    elif excel['1st Revised Target Date'].notnull().any() == True:
+        excel = excel[['Issue # Ref', 'Target Date', '1st Revised Target Date', 'Revised Target Date', 'Audit Name', 'Brief Description']]
+    elif excel['Revised Target Date'].notnull().any() == True:
+        excel = excel[['Issue # Ref', 'Target Date', 'Revised Target Date', 'Audit Name', 'Brief Description']]
+    else:
+        excel = excel[['Issue # Ref', 'Target Date', 'Audit Name', 'Brief Description']]
+```
+* Basic format of the table in the report requires only four columns as shown in **else:** code
+* However, whenever actions get extended their Target Dates, extra columns should be added in chronic order
+    * If extended one time --> **Revised Target Date**
+    * If extended two times --> **Revised Target Date** and **1st Revised Target Date**
+    * If extended three times --> **Revised Target Date** and **1st Revised Target Date** and **2nd Revised Target Date**
+    If extended four times --> **Revised Target Date** and **1st Revised Target Date** and **2nd Revised Target Date** and **3rd Revised Target Date**
+* Number of columns will vary on the maximum number of Target Date extended
+    * Each department has different number of extension and therefore it is necessary to set columns differently by each circumstance
+> <ins>Commercial Credit_01.02.23.docx</ins> does not have any action extended and therefore has only four columns.\
+However, <ins>Servicing & Loyalty_01.02.23.docx</ins> has one action extended four times, and therefore has 8 columns
