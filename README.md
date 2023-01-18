@@ -43,13 +43,13 @@ Fields:
 * Project ID (Format YYYY-###): Identification for each project
 * Project Name: Audit project name
 * Issue Number: Issue numbering (Group)
-* DepartmentResponsible: Department that is audited
-* Action Status: Status of action plan. In original repository, it can be "Open"/"Closed"/"Pending Verification", but when exported, get only "Open"/"Pending Verification"
+* DepartmentResponsible: Name of department audited
+* Action Status: Status of action plan. In original repository, it can be "Open"/"Closed"/"Pending Verification", but for current exported data is alreday filtered by "Open" & "Pending Verification"
 * Target Date: Initial target date to complete action plan
-* Revised Target Date: 1st & Final revised target date to complete action plan. If an action is extended at least one time, always refer this field as a final date
-* 1st Revised Target Date: Date when extended two times
-* 2nd Revised Target Date: Date when extended three times
-* 3rd Revised Target Date: Date when extended four times
+* Revised Target Date: 1st or Final revised target date to complete action plan. If an action is extended at least one time, always refer this field as a final date
+* 1st Revised Target Date: Target date when extended two times
+* 2nd Revised Target Date: Target Date when extended three times
+* 3rd Revised Target Date: Target Date when extended four times
 * Management Action: Action Detail in Issue Number (Member)
 
 
@@ -106,4 +106,32 @@ for i in range(0, len(Data_Repository)):
         Data_Repository.loc[i, '1st Revised Target Date'] = Data_Repository.loc[i, '1st Revised Target Date'] = list[0]
         Data_Repository.loc[i, '2nd Revised Target Date'] = Data_Repository.loc[i, '2nd Revised Target Date'] = list[1]
 ```
-* 
+![Data Error Sample](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/Data_Error_Sample.png)
+* Notice that "Payment Processing" project has error in Target Date; 1st Revised Target Date comes after 2nd Revised Target Date
+    * This is due to human error when entering details in the data repository. 
+* Since "Target Date" and "Revised Target Date" are not influenced by this error, we can simply re-arrange 1st & 2nd & 3rd Revised Target Date in chronic order by using list.sort
+
+## 4. Body
+ Every code for **4. Body** is inside of function called "body". Thus, be mindful of indentation.
+
+ ```
+ def body(To, cc, dept, Date1, Date2, evidence):
+    doc = docx.Document()
+    section = doc.sections[0]
+    section.top_margin = Inches(0.62)
+    section.bottom_margin = Inches(0.31)
+    section.left_margin = Inches(0.75)
+    section.right_margin = Inches(0.81)
+    normal_style = doc.styles['Normal']
+    normal_style.font.name = 'Arial'
+    normal_style.font.size = Pt(10)
+    normal_style.font.color.rgb = RGBColor(31, 73, 125)
+```
+* This is a preset of word document format
+* **[section.~]** codes configures [Layout --> Margins] in word document
+    * ![Doc Margins Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/doc_mamrgins.png)
+* **[normal_style]** codes configures [Home --> Styles --> Normal] in word document
+    * ![Doc Style Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/doc_style.png)
+
+<br/>
+
