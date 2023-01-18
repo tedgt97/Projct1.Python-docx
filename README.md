@@ -71,7 +71,13 @@ Date2 = 'January 2, 2023'
 
 </details>
 
+<details>
+<summary>
+
 ## 2. Data Preparation
+
+</summary>
+
 ```
 Data_Repository = Data_Repository.rename(columns = {'Issue Number': 'Issue # Ref', 'Project Name': 'Audit Name', 'Management Action': 'Brief Description'})
 ```
@@ -113,17 +119,21 @@ for i in range(0, len(Data_Repository)):
         Data_Repository.loc[i, '1st Revised Target Date'] = Data_Repository.loc[i, '1st Revised Target Date'] = list[0]
         Data_Repository.loc[i, '2nd Revised Target Date'] = Data_Repository.loc[i, '2nd Revised Target Date'] = list[1]
 ```
-<details>
-<summary>Data_Error.PNG</summary><blockquote>
-
 ![Data Error Sample](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/Data_Error.PNG)
 
-</blockquote></details>
 * Notice that "Payment Processing" project has error in Target Date; 1st Revised Target Date comes after 2nd Revised Target Date
     * This is due to human error when entering details in the data repository. 
 * Since "Target Date" and "Revised Target Date" are not influenced by this error, we can simply re-arrange 1st & 2nd & 3rd Revised Target Date in chronic order by using list.sort
 
+</details>
+
+<details>
+<summary>
+
 ## 4. Body
+
+</summary>
+
  Every code for **4. Body** is inside of function called "body". Thus, be mindful of indentation.
 
  ```
@@ -143,20 +153,10 @@ for i in range(0, len(Data_Repository)):
 * **[doc = docx.Document()]** is Document constructor from **Python-docx package**
     * Every Document objects must follow after the initial constructor
 * **[section.~]** codes configure fortmat of [Layout --> Margins] in Document
-    <details>
-    <summary>doc_margins.PNG</summary>
-
     ![Doc Margins Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/doc_margins.PNG)
 
-    </details>
-
 * **[normal_style]** codes configure format of [Home --> Styles --> Normal] in Document
-    <details>
-    <summary>doc_style.PNG</summary>
-
     ![Doc Style Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/doc_style.PNG)
-
-    </details>
 
 > Note that **[body]** function has five different arguments\
     * **To** & **cc** & **evidence** --> defined in <ins>dictionary</ins> from **5. Departments** section\
@@ -172,12 +172,7 @@ To: {}
 cc: {}
     '''.format(To, cc)
 ```
-<details>
-<summary>main1.PNG</summary>
-
 ![Email Receivers](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/main1.PNG)
-
-</details>
 
 * **[main1]** prints names of employees who will receive report email
     * "To:" for head of department
@@ -188,12 +183,8 @@ cc: {}
 Subject: {} Open Audit Issues / Action Plans Summary as of {}
     '''.format(dept, Date1)
 ```
-<details>
-<summary>line1.PNG</summary>
 
 ![Subject line](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/line1.PNG)
-
-</details>
 
 * **[line1]** prints subject line of email
     * contains the name of department and date of report
@@ -211,12 +202,8 @@ Please note: Target Date extensions will need to be approved by the respective D
 
     '''.format(Date2, evidence)
 ```
-<details>
-<summary>line2.PNG</summary>
-
 ![line2](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/line2.PNG)
 
-</details>
 
 * **[line2]** prints body paragraph of email
     * "**evidence**" for whom to send evidence of action plan (mostly auditor who is in charge of)
@@ -230,3 +217,9 @@ Please note: Target Date extensions will need to be approved by the respective D
     * multiple paragraphs can exist as different groups
 * After initial texts of paragraph, additional texts can be added by **[add_run]**
     * each line added is subordinated to paragraph and follows paragraph's format unless defined seperately like **[line1]**
+
+
+
+
+
+</details>
