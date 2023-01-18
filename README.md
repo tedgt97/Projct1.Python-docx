@@ -37,7 +37,7 @@ This project is to create a script in Python that can automate such processes in
 ## Data Validation
 #### tblReport Query.xlsx 
 
-! For company privacy policy, every record in the data is made up and does not reflect the real-life information
+! Every record in the data is made up and does not reflect the real-life information
 
 Fields:
 * Project ID (Format YYYY-###): Identification for each project
@@ -106,7 +106,7 @@ for i in range(0, len(Data_Repository)):
         Data_Repository.loc[i, '1st Revised Target Date'] = Data_Repository.loc[i, '1st Revised Target Date'] = list[0]
         Data_Repository.loc[i, '2nd Revised Target Date'] = Data_Repository.loc[i, '2nd Revised Target Date'] = list[1]
 ```
-![Data Error Sample](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/Data_Error_Sample.png)
+![Data Error Sample](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/Data_Error.PNG)
 * Notice that "Payment Processing" project has error in Target Date; 1st Revised Target Date comes after 2nd Revised Target Date
     * This is due to human error when entering details in the data repository. 
 * Since "Target Date" and "Revised Target Date" are not influenced by this error, we can simply re-arrange 1st & 2nd & 3rd Revised Target Date in chronic order by using list.sort
@@ -128,10 +128,63 @@ for i in range(0, len(Data_Repository)):
     normal_style.font.color.rgb = RGBColor(31, 73, 125)
 ```
 * This is a preset of word document format
-* **[section.~]** codes configures [Layout --> Margins] in word document
-    * ![Doc Margins Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/doc_mamrgins.png)
-* **[normal_style]** codes configures [Home --> Styles --> Normal] in word document
-    * ![Doc Style Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/doc_style.png)
+* **[doc = docx.Document()]** is Document constructor from **Python-docx package**
+    * Every Document objects must follow after the initial constructor
+* **[section.~]** codes configures fortmat of [Layout --> Margins] in Document
+    * ![Doc Margins Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/doc_margins.PNG)
+* **[normal_style]** codes configures format of [Home --> Styles --> Normal] in Document
+    * ![Doc Style Configuration](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/doc_style.PNG)
+> Note that **[body]** function has five different arguments
+    * **To** & **cc** & **evidence** --> defined in <ins>dictionary</ins> from **5. Departments** section
+    * **dept** --> defined in <ins>list</ins> from **5. Departments** section
+    * **Date1** & **Date2** --> already defined in **1. Config This Before Run** Section
 
 <br/>
 
+```
+    main1 = '''
+To: {}
+
+cc: {}
+    '''.format(To, cc)
+```
+* ![Email Receivers](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/main1.PNG)
+* **[main1]** prints names of employees who will receive report email
+    * "To:" for head of department
+    * "cc:" for relevant employees
+
+```
+    line1 = '''
+Subject: {} Open Audit Issues / Action Plans Summary as of {}
+    '''.format(dept, Date1)
+```
+* ![Subject line](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/line1.PNG)
+* **[line1]** prints subject line of email
+    * contains the name of department and date of report
+
+```
+    line2 = '''
+
+Please find the Outstanding Audit Issues/Action Plans Summary as of {} (attached).
+
+When actions have been completed, please provide the supporting evidence to close the action. Email evidence to {}.
+
+Should you need to revise the target completion date, please send an email to Internal Audit DH, or designee, noting the revised date, reason for the delay and interim action to mitigate risk, as applicable.
+
+Please note: Target Date extensions will need to be approved by the respective Division Head, via email.
+
+    '''.format(Date2, evidence)
+```
+* ![line2](https://github.com/tedgt97/Projct1.Python-docx/blob/main/Pictures/line2.PNG)
+* **[line2]** prints body paragraph of email
+    * "**evidence**" for whom to send evidence of action plan (mostly auditor who is in charge of)
+
+```
+    parag = doc.add_paragraph(main1, 'Normal')
+    parag.add_run(line1).font.color.rgb = RGBColor(0, 32, 96)
+    parag.add_run(line2)
+```
+* In order to add texts in Document, initial paragraph must be created by **[parag]**
+    * multiple paragraphs can exist as different groups
+* After initial texts of paragraph, additional texts can be added by **[add_run]**
+    * each line added is subordinated to paragraph and follows paragraph's format unless defined seperately like **[line1]**
