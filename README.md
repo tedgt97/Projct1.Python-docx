@@ -53,8 +53,13 @@ Fields:
 * Management Action: Action Detail in Issue Number (Member)
 
 
+<details>
+<summary>
 
 ## 1. CONFIG THIS BEFORE RUN
+
+</summary>
+
 ```
 Save_Dir = r"#"
 Date1 = '01.02.23'
@@ -64,6 +69,7 @@ Date2 = 'January 2, 2023'
 * "Save_Dir": Folder directory where you want to save Monthly Audit Issue Tracker
 * "Date1" & "Date2": Date variables that will be shown in body paragraph
 
+</details>
 
 ## 2. Data Preparation
 ```
