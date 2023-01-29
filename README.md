@@ -1,6 +1,6 @@
 # Projct1: Python-docx 
-#### **Monthly Audit Issue Tracker by using Python-docx package**
-\
+**Monthly Audit Issue Tracker by using Python-docx package**
+
 **Table of Contents**
 1. [Introduction](#introduction)
 2. [Goal](#goal)
@@ -24,7 +24,7 @@ This project is to create a script in Python that can automate such processes in
 <br/>
 
 ## Goal
-### Generate monthly <ins>Audit Issue Tracking Report</ins> in <ins>word document</ins> with <ins>tables</ins> for Open Action Plans.
+**Generate monthly <ins>Audit Issue Tracking Report</ins> in <ins>word document</ins> with <ins>tables</ins> for Open Action Plans.**
 
 ### Objects:
 1. Perform data cleaning of raw data from Audit Data Repository
