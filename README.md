@@ -1,5 +1,15 @@
 # Projct1: Python-docx 
-### **Monthly Audit Issue Tracker by using Python-docx package**
+#### **Monthly Audit Issue Tracker by using Python-docx package**
+\
+**Table of Contents**\
+1. [Introduction](#introduction)
+2. [Goal](#goal)
+3. [Data Validation](#data-validation)
+4. [Script Details](#script-details)
+    4.1 [CONFIG THIS BEFORE RUN](#1-config-this-before-run)
+    4.2 [Data Preparation](#2-data-preparation)
+    4.4 [Body](#44-body)
+
 
 <br/>
 
@@ -55,7 +65,9 @@ Fields:
 <details>
 <summary>
 
-### 1. CONFIG THIS BEFORE RUN
+## Script Details
+
+### 4.1 CONFIG THIS BEFORE RUN
 
 </summary>
 
@@ -73,7 +85,7 @@ Date2 = 'January 2, 2023'
 <details>
 <summary>
 
-### 2. Data Preparation
+### 4.2 Data Preparation
 
 </summary>
 
@@ -127,7 +139,7 @@ for i in range(0, len(Data_Repository)):
 </details>
 
 
-### 4. Body
+### 4.4 Body
 
 
  Every code for **4. Body** is inside of function called ***body***. Thus, be mindful of indentation.
