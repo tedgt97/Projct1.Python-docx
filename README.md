@@ -1,13 +1,13 @@
 # Projct1: Python-docx 
 #### **Monthly Audit Issue Tracker by using Python-docx package**
 \
-**Table of Contents**\
+**Table of Contents**
 1. [Introduction](#introduction)
 2. [Goal](#goal)
 3. [Data Validation](#data-validation)
-4. [Script Details](#script-details)
-    4.1 [CONFIG THIS BEFORE RUN](#1-config-this-before-run)
-    4.2 [Data Preparation](#2-data-preparation)
+4. [Script Details](#script-details)\
+    4.1 [CONFIG THIS BEFORE RUN](#1-config-this-before-run)\
+    4.2 [Data Preparation](#2-data-preparation)\
     4.4 [Body](#44-body)
 
 
