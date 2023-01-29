@@ -13,7 +13,7 @@
 
 <br/>
 
-## Introduction
+## 1. Introduction
 
 Audit issue tracking is as important phase of audit cycle as audit fieldwork. Auditor’s roles involve constant tracking of issues logs, due dates, and action plans. It is also auditor’s job to send reminder emails to directors and responsible employees until they complete issue and close action plan.\
 \
@@ -23,7 +23,7 @@ This project is to create a script in Python that can automate such processes in
 
 <br/>
 
-## Goal
+## 2. Goal
 **Generate monthly <ins>Audit Issue Tracking Report</ins> in <ins>word document</ins> with <ins>tables</ins> for Open Action Plans.**
 
 ### Objects:
@@ -43,7 +43,7 @@ This project is to create a script in Python that can automate such processes in
 
 <br/>
 
-## Data Validation
+## 3. Data Validation
 #### [**tblReport Query.xlsx**](https://github.com/tedgt97/Projct1.Python-docx/blob/main/tblReport%20Query.xlsx)
 
 **! Every record in the data is made up and does not reflect the real-life information**
@@ -62,10 +62,10 @@ Fields:
 * Management Action: Action Detail in Issue Number (Member)
 
 
+## 4. Script Details
+
 <details>
 <summary>
-
-## Script Details
 
 ### 4.1 CONFIG THIS BEFORE RUN
 
